@@ -1,0 +1,204 @@
+:root {
+    --text--color: #fff;
+    --background--color: #101218;
+    --shadown--color: #807e7e;
+    --later--color: #AE2E24;
+    --done--color: #216E4E;
+    --done--color--btn: #164733;
+    --do--color: #7F5F01;
+    --color--btn: #464545;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace, serif;
+}
+
+body {
+    background-color: var(--background--color);
+    color: var(--text--color);
+    padding: 10% 10%;
+    font-size: 1.1rem;
+}
+
+.main__container {
+    padding: 10% 10%;
+    margin: 0 auto;
+    background-color: var(--background--color);
+    box-shadow: 0px 0px 10px 0px var(--shadown--color); 
+    border-radius: 10px;
+}
+
+.add__area {
+    display: flex;
+    padding: 2% 5%;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.input__tarefa {
+    width: 80%;
+    padding: 20px;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px var(--shadown--color); 
+    resize: none;
+}
+
+.btn__add {
+    border-radius: 8px;
+    padding: 3%;
+    color: var(--text--color);
+    cursor: pointer;
+    background-color: var(--color--btn);
+    border: none;
+    width: 25%;
+    box-shadow: 0px 0px 10px 0px var(--shadown--color); 
+}
+
+.btn__add:hover {
+    background-color: #7a7373;
+    transform: scale(1.15);
+}
+
+.tarefa__area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.colorNewNote {
+    background-color: var(--color--btn);
+}
+
+.colorDone {
+    background-color: var(--done--color) !important;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.colorDo {
+    background-color: var(--do--color) !important;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.colorLater {
+    background-color: var(--later--color) !important;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.tarefa__container {
+    background-color: var(--color--btn);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px var(--shadown--color); 
+    transition: 0.1s;
+}
+
+.tarefa__container:hover .colors__area{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-5%) translateY(5px);
+}
+
+.colors__area {
+    display: flex;
+    gap: 10px;
+    margin-left: 35%;
+    align-items: center;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.btn__done {
+    cursor: pointer;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--done--color--btn);
+}
+
+.btn__do {
+    cursor: pointer;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--do--color);
+}
+
+.btn__later {
+    cursor: pointer;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--later--color);
+}
+
+.btn__edit {
+    cursor: pointer;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.btn__remove {
+    cursor: pointer;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.text__iten {
+    padding: 5% 10%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.edit__field {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+    outline: none;
+    z-index: 1;
+    resize: none;
+    border: none;
+    box-shadow: none;
+    color: var(--text--color);
+    font-size: 1.1rem;
+}
+
+.hidde {
+    display: none;
+}
+
+.btn__ok {
+    cursor: pointer;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--done--color--btn);
+    margin-left: 47%;
+}
+
